@@ -2,6 +2,9 @@
 #-----------Test Workflow YAML Pipeline for GitHub Actions
 #-----------made by Eugene
 name: My-GitHubActions-Test
+env:
+  APPLICATION_NAME       : "MyFlask"
+  DEPLOY_PACKAGE_NAME    : "flask-deploy-ver-${{ github.sha}}"
 
 on:
   push:
@@ -25,3 +28,5 @@ jobs:
     steps:
     - name: Print Finish Message
       run : echo "Finished successfully from Finish job"
+    - name: Print DEPLOY_PACKAGE_NAME Message
+      run : echo "$DEPLOY_PACKAGE_NAME Finished successfully"
