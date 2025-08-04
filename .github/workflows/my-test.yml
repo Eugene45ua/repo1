@@ -27,6 +27,13 @@ jobs:
       run : |
         pwd
         ls -la
+    - name: Git clone my repo
+      uses: actions/checkout@v3
+    - name: List current folder again
+      run : |
+        pwd
+        ls -la
+      
   my-deploy:
     runs-on: ubuntu-latest
     steps:
