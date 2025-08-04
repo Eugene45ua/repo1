@@ -23,6 +23,10 @@ jobs:
         echo "${{ env.APPLICATION_NAME}}"
         echo "$DEPLOY_PACKAGE_NAME"
         echo "${{ env.DEPLOY_PACKAGE_NAME}}"
+    - name: List current folder
+      run : |
+        pwd
+        ls -la
   my-deploy:
     runs-on: ubuntu-latest
     steps:
