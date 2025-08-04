@@ -1,0 +1,21 @@
+#-----------------------------------------------------
+#-----------Test Workflow YAML Pipeline for GitHub Actions
+#-----------made by Eugene
+name: My-GitHubActions-Test
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  my-test:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Print Hello Message
+      run : echo "Hello World from Testing job"
+  my-deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Print Hello Message
+      run : echo "Hello World from Deploying job"
