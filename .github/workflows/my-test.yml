@@ -17,6 +17,12 @@ jobs:
     steps:
     - name: Print Hello Message
       run : echo "Hello World from Testing job"
+    - name: Execute few commands
+      run : |
+        echo "$APPLICATION_NAME"
+        echo "${{ env.APPLICATION_NAME}}"
+        echo "$DEPLOY_PACKAGE_NAME"
+        echo "${{ env.DEPLOY_PACKAGE_NAME}}"
   my-deploy:
     runs-on: ubuntu-latest
     steps:
